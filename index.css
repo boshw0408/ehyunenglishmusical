@@ -1,7 +1,17 @@
 /* basic */
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     padding: 0;
     margin: 0;
+    user-select: none;
+
+}
+
+header {
+    height: 100vh;
 }
 
 a{
@@ -13,11 +23,15 @@ li{
     list-style: none;    
 }
 
+
+
 /* navbar */
 .navbar{
     display: flex;    
     min-height: 10vh;
     align-items: center;
+    font-family: 'Nixie One', cursive;
+     
 }
 
 .navbar .left-nav{
@@ -47,6 +61,66 @@ html {
     flex: 1;
 }
 
-.slogan {
+.logo-text {
+    font-family: 'Italianno', cursive;
+    font-weight: 200;
     
 }
+
+
+
+/* slogan */
+.slogan-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    position: relative;
+    top: 20%;
+    height: 40%;
+}
+
+.slogan-container {
+    animation: 1s ease-in appear;
+    grid-column: 7 / 10;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    font-family: 'Noto Serif Display', cursive;
+    font-size: 1.5rem;
+    position: relative;
+}
+.slogan {
+    /* background-color: blue;
+    background-clip: text;
+    -webkit-background-clip: text; */
+    /* color: transparent; */
+}
+
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+/* watermark */
+.watermark-container {
+    width: 100%;
+    position: absolute;
+    bottom: 2.5%;
+    display: flex;
+    justify-content: center;
+}
+.watermark {
+    font-family: 'Italianno', cursive;
+    font-weight: 100;
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+}
+
+

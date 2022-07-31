@@ -14,4 +14,15 @@ li{
 .navbar .left-nav{
     width: 60%;
 }
+html {
+    background-color: #FFF0DB;
+    color: #565656;
+}
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
 
+.slogan {
+    
+}

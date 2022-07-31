@@ -59,12 +59,14 @@ html {
 
 .nav-tab{
     flex: 1;
+    letter-spacing: 0.2rem;
+
 }
 
 .logo-text {
     font-family: 'Italianno', cursive;
     font-weight: 200;
-    
+    letter-spacing: 0.1rem;
 }
 
 
@@ -89,13 +91,41 @@ html {
     position: relative;
 }
 .slogan {
-    /* background-color: blue;
+    background-color: #565656;
+    color: transparent;
     background-clip: text;
-    -webkit-background-clip: text; */
-    /* color: transparent; */
+    -webkit-background-clip: text;
+    background-image: linear-gradient(
+        65deg, 
+        rgba(255, 255, 255, 0) 40%, 
+        rgba(255, 255, 255, 0.4) 50% 51%, 
+        rgba(255, 255, 255, 0) 60%
+    );
+    background-size: 200% 100%;
+    background-position: 120% 0;
+
+
 }
 
+#slogan1 {
+    animation: shine 0.8s linear 1s;
+}
+#slogan2 {
+    background-color: goldenrod;
+    animation: shine 0.8s linear 1.4s;
+}
+#slogan3 {
+    animation: shine 0.8s linear 1.8s;
+}
 
+@keyframes shine {
+    from {
+        background-position: 120% 0;
+    }
+    to {
+        background-position: -80% 0;
+    }
+}
 @keyframes appear {
     from {
         opacity: 0;
@@ -120,7 +150,7 @@ html {
     font-family: 'Italianno', cursive;
     font-weight: 100;
     font-size: 2rem;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.5rem;
 }
 
 

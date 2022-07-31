@@ -1,18 +1,38 @@
+/* basic */
+body{
+    padding: 0;
+    margin: 0;
+}
+
 a{
     text-decoration: none;
     color: black;
 }
 
 li{
-    list-style: none;
+    list-style: none;    
 }
 
+/* navbar */
 .navbar{
     display: flex;    
+    min-height: 10vh;
+    align-items: center;
 }
 
 .navbar .left-nav{
     width: 60%;
+    padding-left: 2%;
+    font-size: 1.8rem;
+}
+
+nav{
+    width: 40%;
+    text-align: center;
+}
+
+nav ul{
+    display: flex;
 }
 html {
     background-color: #FFF0DB;
@@ -21,6 +41,10 @@ html {
 * {
     margin: 0;
     box-sizing: border-box;
+}
+
+.nav-tab{
+    flex: 1;
 }
 
 .slogan {

@@ -34,7 +34,19 @@ nav{
 nav ul{
     display: flex;
 }
+html {
+    background-color: #FFF0DB;
+    color: #565656;
+}
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
 
 .nav-tab{
     flex: 1;
+}
+
+.slogan {
+    
 }

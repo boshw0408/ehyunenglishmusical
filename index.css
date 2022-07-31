@@ -1,3 +1,19 @@
+a{
+    text-decoration: none;
+    color: black;
+}
+
+li{
+    list-style: none;
+}
+
+.navbar{
+    display: flex;    
+}
+
+.navbar .left-nav{
+    width: 60%;
+}
 html {
     background-color: #FFF0DB;
     color: #565656;

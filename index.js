@@ -1,7 +1,10 @@
 // preloader
-const selectPreloadContainer = document.querySelector('.preloader-container');
+const preloader = document.getElementById('preloader');
 
-function preload(){
+function endPreload(){
+    preloader.classList.add('preloader-exit-animation');
+}
 
-};
-window.addEventListener('loadstart',preload)
+window.addEventListener('load',()=>{
+    setTimeout(endPreload,1000);
+});

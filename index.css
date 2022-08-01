@@ -1,7 +1,17 @@
 /* basic */
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     padding: 0;
     margin: 0;
+    user-select: none;
+
+}
+
+header {
+    height: 100vh;
 }
 
 a{
@@ -13,11 +23,15 @@ li{
     list-style: none;    
 }
 
+
+
 /* navbar */
 .navbar{
     display: flex;    
     min-height: 10vh;
     align-items: center;
+    font-family: 'Nixie One', cursive;
+     
 }
 
 .navbar .left-nav{
@@ -33,6 +47,7 @@ nav{
 
 nav ul{
     display: flex;
+    /* justify-content: space-around; */
 }
 html {
     background-color: #FFF0DB;
@@ -45,12 +60,105 @@ html {
 
 .nav-tab{
     flex: 1;
+    letter-spacing: 0.2rem;
+    position: relative;
+    width: min-content;
 }
 
+.logo-text {
+    font-family: 'Italianno', cursive;
+    font-weight: 200;
+    letter-spacing: 0.1rem;
+}
+
+.nav-link {
+    /* border-style: solid;
+    border-image-source: url('./toppng.com-decorative-line-png-1300x238.svg');
+    border-width: 15px;
+    border-image-slice: 0% 0% 100% 0%;  */
+}
+
+.nav-link::after {
+    content: "";
+    background-image: url('./toppng.com-decorative-line-png-1300x238.svg');
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 0;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 10;
+}
+
+
+
+/* slogan */
+.slogan-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    position: relative;
+    top: 20%;
+    height: 40%;
+}
+
+.slogan-container {
+    animation: 1s ease-in appear;
+    grid-column: 7 / 10;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    font-family: 'Noto Serif Display', cursive;
+    font-size: 1.5rem;
+    position: relative;
+}
 .slogan {
-    
+    background-color: #565656;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(
+        65deg, 
+        rgba(255, 255, 255, 0) 40%, 
+        rgba(255, 255, 255, 0.4) 50% 51%, 
+        rgba(255, 255, 255, 0) 60%
+    );
+    background-size: 200% 100%;
+    background-position: 120% 0;
+
+
 }
 
+#slogan1 {
+    animation: shine 0.8s linear 1s;
+}
+#slogan2 {
+    background-color: goldenrod;
+    animation: shine 0.8s linear 1.4s;
+}
+#slogan3 {
+    animation: shine 0.8s linear 1.8s;
+}
+
+@keyframes shine {
+    from {
+        background-position: 120% 0;
+    }
+    to {
+        background-position: -80% 0;
+    }
+}
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+<<<<<<< HEAD
 /* preloader */
 .preloader-container{
     background-color: antiquewhite;
@@ -68,3 +176,24 @@ html {
 .preloader-img{
     width: 15%;
 }
+=======
+
+
+
+/* watermark */
+.watermark-container {
+    width: 100%;
+    position: absolute;
+    bottom: 2.5%;
+    display: flex;
+    justify-content: center;
+}
+.watermark {
+    font-family: 'Italianno', cursive;
+    font-weight: 100;
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+}
+
+
+>>>>>>> upstream/main

@@ -5,7 +5,6 @@
     <title>Ehyun English Musical</title>
     <link rel="stylesheet" href="./index.css" />
 
-
     <!-- google fonts -->
 
     <!-- Italianno -->
@@ -20,43 +19,61 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Italianno&family=Noto+Serif+Display:wght@200&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display&display=swap"
       rel="stylesheet"
     />
+
+    <!-- nixie one -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./index.js" defer></script>
   </head>
   <body>
-    <!-- navigation bar -->
-    <div class="navbar">
-      <div class="left-nav">
-        <p class="logo-text">Ehyun English Mugical</p>
+    <!-- full page header -->
+    <header>
+      <!-- navigation bar -->
+      <div class="navbar">
+        <div class="left-nav">
+          <h1 class="logo-text">Ehyun English Mugical</h1>
+        </div>
+        <!-- preloader -->
+        <div class="preloader-container">
+          <img
+            src="./image/music_drawing.gif"
+            alt="Loading Mugical Drawing"
+            class="preloader-img"
+            id="preloader-img"
+          />
+        </div>
+        <nav>
+          <ul>
+            <li class="nav-tab">
+              <a href="#" class="nav-link" id="nav-about">About</a>
+            </li>
+            <li class="nav-tab">
+              <a href="#" class="nav-link" id="nav-projects">Projects</a>
+            </li>
+            <li class="nav-tab">
+              <a href="#" class="nav-link" id="nav-contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="slogan-grid">
+        <div class="slogan-container">
+          <h1 id="slogan1" class="slogan">Creativity</h1>
+          <h1 id="slogan2" class="slogan">Enlightenment</h1>
+          <h1 id="slogan3" class="slogan">Entertainment</h1>
+        </div>
       </div>
 
-      <nav>
-        <ul>
-          <li class="nav-tab">
-            <a href="#" class="nav-about" id="nav-about">About</a>
-          </li>
-          <li class="nav-tab">
-            <a href="#" class="nav-projects" id="nav-projects">Projects</a>
-          </li>
-          <li class="nav-tab">
-            <a href="#" class="nav-contact" id="nav-contact">Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <h1 class="slogan">Creativity</h1>
-    <h1 class="slogan">Enlightenment</h1>
-    <h1 class="slogan">Entertainment</h1>
-
-    <!-- preloader -->
-    <div class="preloader-container">
-      <img
-        src="./image/music_drawing.gif"
-        alt="Loading Mugical Drawing"
-        class="preloader-img"
-        id="preloader-img"
-      />
-    </div>
+      <div class="watermark-container">
+        <h2 class="watermark">Kate Kang</h2>
+      </div>
+    </header>
   </body>
 </html>

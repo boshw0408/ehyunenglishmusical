@@ -47,7 +47,7 @@ nav{
 
 nav ul{
     display: flex;
-    /* justify-content: space-around; */
+    justify-content: space-around;
 }
 html {
     background-color: #FFF0DB;
@@ -59,7 +59,6 @@ html {
 }
 
 .nav-tab{
-    flex: 1;
     letter-spacing: 0.2rem;
     position: relative;
     width: min-content;
@@ -78,18 +77,18 @@ html {
     border-image-slice: 0% 0% 100% 0%;  */
 }
 
-.nav-link::after {
-    content: "";
-    background-image: url('./toppng.com-decorative-line-png-1300x238.svg');
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 100%;
-    left: 0;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: 10;
+
+.floral-line{
+    pointer-events: none;
+}
+
+.floral-line-path {
+    stroke: black;
+    stroke-width: 35;
+    stroke-dasharray: 100000;
+    stroke-dashoffset: 100000;
+    fill: none;
+    transition: stroke-dashoffset 0.5s linear;
 }
 
 

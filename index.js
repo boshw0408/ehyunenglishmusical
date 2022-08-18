@@ -33,8 +33,6 @@ let i=0;
 let index=0;
 const select = document.getElementById('text');
 
-typeAnimation();
-
 function typeWriter(NUM) {
     if (i < txt[NUM].length) {
             select.innerHTML += txt[NUM].charAt(i);
@@ -113,3 +111,112 @@ function shrinkAnimation(){
     setTimeout(secondText,300);
     setTimeout(firstText,500);
 }
+
+//page background color animation
+const selectHTML = document.querySelector('html');
+
+function changeTo_mainBGC(){
+    selectHTML.style.backgroundColor = '#FFF0DB';
+}
+function changeTo_projectBGC(){
+    selectHTML.style.backgroundColor = '#679B9B';
+}
+function changeTo_aboutBGC(){
+    selectHTML.style.backgroundColor = '#FFC4D0';
+}
+function changeTo_contactBGC(){
+    selectHTML.style.backgroundColor = 'white';
+}
+
+// page animation
+const one = document.getElementById('header');
+const two = document.getElementById('about-page');
+const three = document.getElementById('projects-page');
+const four = document.getElementById('contact-page');
+const five = document.getElementById('end-page');
+
+one.addEventListener('wheel',scrollget);
+let page = 1;
+
+function scrollget(event){
+    if(event.deltaY > 0)
+    {
+        if(page == 1){
+            two.scrollIntoView({
+                behavior: 'smooth'
+            });
+            one.removeEventListener('wheel',scrollget);
+            two.addEventListener('wheel',scrollget);
+            changeTo_aboutBGC();
+            page = 2;
+        }
+        else if(page == 2){
+            three.scrollIntoView({
+                behavior: 'smooth'
+            });
+            two.removeEventListener('wheel',scrollget);
+            three.addEventListener('wheel',scrollget);
+            changeTo_projectBGC();
+            page = 3;
+        }
+        else if(page == 3){
+            four.scrollIntoView({
+                behavior: 'smooth'
+            });
+            three.removeEventListener('wheel',scrollget);
+            four.addEventListener('wheel',scrollget);
+            changeTo_contactBGC();
+            page = 4;
+        }
+        else if(page == 4){
+          five.scrollIntoView({
+              behavior: 'smooth'
+          });
+          four.removeEventListener('wheel',scrollget);
+          five.addEventListener('wheel',scrollget);
+          changeTo_mainBGC();
+          page = 5;
+      }
+    }
+     
+    else if(event.deltaY < 0)
+    {
+        if(page == 5){
+          four.scrollIntoView({
+              behavior: 'smooth'
+          });
+          five.removeEventListener('wheel',scrollget);
+          four.addEventListener('wheel',scrollget);
+          changeTo_contactBGC();
+          page = 4;
+      }
+      else if(page == 4){
+        three.scrollIntoView({
+            behavior: 'smooth'
+        });
+        four.removeEventListener('wheel',scrollget);
+        three.addEventListener('wheel',scrollget);
+        changeTo_projectBGC();
+        page = 3;
+    }
+      else if(page == 3){
+          two.scrollIntoView({
+              behavior: 'smooth'
+          });
+          three.removeEventListener('wheel',scrollget);
+          two.addEventListener('wheel',scrollget);
+          changeTo_aboutBGC();
+          page = 2;
+      }
+      else if(page == 2){
+          one.scrollIntoView({
+              behavior: 'smooth'
+          });
+          two.removeEventListener('wheel',scrollget);
+          one.addEventListener('wheel',scrollget);
+          changeTo_mainBGC();
+          page = 1;
+      }
+    }
+}
+
